@@ -163,6 +163,7 @@ th {
 
 .audio-track__name {
 	margin-right: 36px;
+	cursor: pointer;
 }
 
 .audio-track__length {
@@ -250,12 +251,12 @@ td.audio-track__length {
 }
 
 .amplitude-paused {
-  background: url('/assets/vectors/player-button-pause.svg');
+  background: url('/assets/vectors/player-button-play.svg');
   background-size: cover;
 }
 
 .amplitude-playing {
-  background: url('/assets/vectors/player-button-play.svg');
+  background: url('/assets/vectors/player-button-pause.svg');
   background-size: cover;
 }
 
