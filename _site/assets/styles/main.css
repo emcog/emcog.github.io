@@ -1,3 +1,4 @@
+/*870px query selector*/
 body {
 	margin: 0;
 	padding: 0;
@@ -64,9 +65,8 @@ nav .is-last {
 }
 
 #cover > img {
-	grid-column: 6/10;
-
-	margin: auto;
+	grid-column: 1/-1;
+	margin: 20px auto 0 auto;
 }
 
 #cover > span {
@@ -146,6 +146,7 @@ progress {
 	grid-column: 5/11;
 	font-family: var(--font-sans-stack);
 	font-size: 30px;
+	
 }
 
 th {
@@ -167,6 +168,20 @@ th {
 .audio-track__length {
 	margin: 0 0 0 auto;
 }
+
+.audio-track__number,
+.audio-track__name,
+.audio-track__length {
+	color: #9F9F9F;
+}
+
+.audio-track__number.track_is-playing,
+.audio-track__name.track_is-playing,
+.audio-track__length.track_is-playing {
+	color: #000000;
+}
+
+
 
 th {
 	height: 1px;
@@ -218,10 +233,11 @@ td.audio-track__length {
 /*controls*/
 
 .amplitude-prev {
+	float: left;
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	margin: 0 0 0 21px;
+	margin: 20px 21px 0 0;
 	background: url('/assets/vectors/player-button-previous.svg');
 	background-size: cover;
 }
@@ -231,17 +247,25 @@ td.audio-track__length {
   height: 75px;
   cursor: pointer;
   float: left;
-  margin-left: 10px;
+}
+
+.amplitude-paused {
+  background: url('/assets/vectors/player-button-pause.svg');
+  background-size: cover;
+}
+
+.amplitude-playing {
   background: url('/assets/vectors/player-button-play.svg');
   background-size: cover;
 }
 
 .amplitude-next {
+	float: right;
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	margin: 0 0 0 21px;
-	background: url('/assets/vectors/player-button-previous.svg');
+	margin: 20px 0 0 21px;
+	background: url('/assets/vectors/player-button-next.svg');
 	background-size: cover;
 }
 

@@ -9,6 +9,7 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- Include amplitude.js -->
 	<script type="text/javascript" src="/assets/js/amplitude.min.js"></script>
+	<script type="text/javascript" src="/assets/main.js"></script>
 
 </head>
 <body>
@@ -31,13 +32,18 @@
 		<span>Mindfulness-Based Organisational Education</span>
 		<h1>Meditations</h1>
 	</div>
+
+
 	<div id="audio" class="grid-14-col">
 		<div id="audio-player" class="grid-14-col">
+			
 			<div class="meta-container">
-				<span amplitude-song-info="name" amplitude-main-song-info="true"></span>
+				<span data-amplitude-song-info="name" class="song-name"></span>
   				<!-- <span amplitude-song-info="artist" amplitude-main-song-info="true"></span> -->
 			</div>
+
 			<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+
 			<div class="time-container">
   				<span class="current-time">
     			<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
@@ -47,13 +53,15 @@
     			<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
   				</span>
 			</div>
+
 			<div class="control-container">
 				<div class="amplitude-prev"></div>
   				<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
   				<div class="amplitude-next"></div>
 			</div>
-			
 		</div>
+
+
 		<table id="audio-tracks">
 			<thead>
 				<tr class="table-row_is-hidden"><th>Meditation number</th><th>Meditation name</th><th>Meditation lenghth</th></tr>
@@ -79,46 +87,47 @@
 			swal("11:00 14th February", "This page is being worked on right now and functionality will improve throughout the day, please check here later");
 
 
-// 			Amplitude.init({
-// 				"songs": [
-// 	{
-// 		"name": "Three-step reset",
-// 		"artist": "Mark Leonard",
-// 		"album": "MBOE Meditations",
-// 		"url": "/assets/meditations/three-step-reset.mp3"
-// 	},
-// 	{
-// 		"name": "Bodyscan",
-// 		"artist": "Mark Leonard",
-// 		"album": "MBOE Meditations",
-// 		"url": "/assets/meditations/bodyscan.mp3"
-// 	},
-// 	{
-// 		"name": "Posture and breath",
-// 		"artist": "Mark Leonard",
-// 		"album": "MBOE Meditations",
-// 		"url": "/assets/meditations/posture-and-breath.mp3"
-// 	},
-// 	{
-// 		"name": "Stretching and sitting",
-// 		"artist": "Mark Leonard",
-// 		"album": "MBOE Meditations",
-// 		"url": "/assets/meditations/stretching-and-sitting.mp3"
-// 	},
-// 	// {
-// 	// 	"name": "Mindfulness of feelings",
-// 	// 	"artist": "Mark Leonard",
-// 	// 	"album": "MBOE",
-// 	// 	"url": "/assets/meditations/mindfulness-of-feelings.mp3"
-// 	// },
-// 	{
-// 		"name": "Concentration and allowing the mind to wander",
-// 		"artist": "Mark Leonard",
-// 		"album": "MBOE",
-// 		"url": "/assets/meditations/concentration-and-allowing-the-mind-to-wander.mp3.mp3"
-// 	}
-// ]
-// 			});
+			Amplitude.init({
+				"songs": [
+	{
+		"name": "Three-step reset",
+		"artist": "Mark Leonard",
+		"album": "MBOE Meditations",
+		"url": "/assets/meditations/three-step-reset.mp3"
+	},
+	{
+		"name": "Bodyscan",
+		"artist": "Mark Leonard",
+		"album": "MBOE Meditations",
+		"url": "/assets/meditations/bodyscan.mp3"
+	},
+	{
+		"name": "Posture and breath",
+		"artist": "Mark Leonard",
+		"album": "MBOE Meditations",
+		"url": "/assets/meditations/posture-and-breath.mp3"
+	},
+	{
+		"name": "Stretching and sitting",
+		"artist": "Mark Leonard",
+		"album": "MBOE Meditations",
+		"url": "/assets/meditations/stretching-and-sitting.mp3"
+	},
+	// {
+	// 	"name": "Mindfulness of feelings",
+	// 	"artist": "Mark Leonard",
+	// 	"album": "MBOE",
+	// 	"url": "/assets/meditations/mindfulness-of-feelings.mp3"
+	// },
+	{
+		"name": "Concentration and allowing the mind to wander",
+		"artist": "Mark Leonard",
+		"album": "MBOE",
+		"url": "/assets/meditations/concentration-and-allowing-the-mind-to-wander.mp3.mp3"
+	}
+],
+continue_next: false
+			});
 	
 	// clickable slider
 	document.getElementById('song-played-progress').addEventListener('click', function(e){
