@@ -70,7 +70,7 @@ nav .is-last {
 }
 
 #cover > span {
-	grid-column: 6/10;
+	grid-column: 1/-1;
 	display: flex;
 	justify-self: center;
 
@@ -81,7 +81,7 @@ nav .is-last {
 	font-weight: var(--light);
 }
 
-#cover > h1 {
+h1 {
 	grid-column: 6/10;
 	display: flex;
 	justify-self: center;
@@ -142,12 +142,13 @@ progress {
 	padding: 0;
 }
 
-#audio-tracks {
-	grid-column: 5/11;
-	font-family: var(--font-sans-stack);
-	font-size: 30px;
-	
-}
+
+	#audio-tracks {
+		grid-column: 5/11;
+		font-family: var(--font-sans-stack);
+		font-size: 29px;	
+	}
+
 
 th {
 	font-size: 1px;
@@ -158,11 +159,14 @@ th {
 }
 
 .audio-track__number {
+	padding-right: 30px;
 	text-align: right;
+	width: 20px;
 }
 
 .audio-track__name {
 	margin-right: 36px;
+	padding-right: 20px;
 	cursor: pointer;
 }
 
@@ -202,9 +206,13 @@ table, tbody, thead, th, td {
 	font-weight: var(--light); 
 }
 
-td.audio-track__number {
-	padding-right: 30px;
-	width: 20px;
+td {
+	vertical-align: top;
+}
+
+
+.audio-track__number {
+	
 }
 
 td.audio-track__length {
@@ -221,7 +229,7 @@ td.audio-track__length {
 }
 
 #download .btn {
-	grid-column: 6/10;
+	grid-column: 5/11;
 	color: black;
 	margin: 0 auto;
 	padding: 06px 80px;
@@ -274,3 +282,99 @@ td.audio-track__length {
 #player_track-list{
 	margin-top: 100px;
 }
+
+/**/
+
+@media screen and (max-width: 1650px) {
+	#audio-tracks {
+		/*grid-column: 5/11;*/
+		font-size: 25px;	
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	#audio-tracks {
+		grid-column: 4/-4;
+		font-size: 25px;	
+	}
+
+	#download {
+		display: none;
+	}
+
+	.control-container,
+	.time-container,
+	.meta-container,
+	progress
+ 		{
+			grid-column: 4/-4;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	#audio-tracks {
+		grid-column: 3/-3;
+		font-size: 25px;	
+	}
+
+
+	.control-container,
+	.time-container,
+	.meta-container,
+	progress
+ 		{
+			grid-column: 3/-3;
+	}
+}
+
+
+
+@media screen and (max-width: 750px) {
+	
+	nav .is-first {
+		grid-column: 2/5;
+		justify-self: start;
+	}
+
+	nav .is-last {
+		grid-column: 11/14;
+		justify-self: end;
+	}
+
+
+	#cover > img {
+		margin: 29px auto 0 auto;
+		width: 353px;
+	}
+
+	#cover > span {
+		margin: 35px auto 0px auto;
+		font-size: 21px;
+	}
+
+	h1 {
+		font-size: 41px;
+	}
+
+	.audio-track__number {
+		padding-right: 12px;
+	}
+
+}
+	
+
+
+@media screen and (max-width: 600px) {
+	#audio-tracks {
+		grid-column: 2/-2;
+		font-size: 22px;	
+	}
+
+
+	.control-container,
+	.time-container,
+	.meta-container,
+	progress
+ 		{
+			grid-column: 2/-2;
+	}
