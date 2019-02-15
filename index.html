@@ -58,11 +58,13 @@
   				</span>
 			</div>
 
-			<!-- <div class="control-container">
+			<div class="control-container">
 				<div class="amplitude-prev"></div>
-  				<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+  				<div class="amplitude-play-pause" id="play-pause"></div>
+  				<!-- <div class="amplitude-play-pause"></div> -->
+  				<div id="btn-play-pause">
   				<div class="amplitude-next"></div>
-			</div> -->
+			</div>
 		</div>
 
 
@@ -152,6 +154,7 @@
 		console.log(this.dataset.amplitudeSongIndex);
 		Amplitude.playSongAtIndex(this.dataset.amplitudeSongIndex);
 	}
+
 
 
 
