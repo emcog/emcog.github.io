@@ -60,9 +60,7 @@
 
 			<div class="control-container">
 				<div class="amplitude-prev"></div>
-  				<div class="amplitude-play-pause" id="play-pause"></div>
-  				<!-- <div class="amplitude-play-pause"></div> -->
-  				<div id="btn-play-pause">
+ 				<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
   				<div class="amplitude-next"></div>
 			</div>
 		</div>
@@ -70,7 +68,7 @@
 
 		<table id="audio-tracks">
 			<thead>
-				<tr class="table-row_is-hidden"><th>Meditation number</th><th>Meditation name</th><th>Meditation lenghth</th></tr>
+				<tr><th>Meditation number</th><th>Meditation name</th><th>Meditation lenghth</th></tr>
 			</thead>
 			<tbody>
 				<tr><td class="audio-track__number">01</td><td class="audio-track__name" data-amplitude-song-info="name" data-amplitude-song-index="0"></td><td class="audio-track__length">02:13</td></tr>
@@ -131,8 +129,9 @@
 			"url": "/assets/meditations/concentration-and-allowing-the-mind-to-wander.mp3"
 		}
 	],
-	
-	continue_next: false
+
+	// continue_next: false,
+	// debug: true
 
 	});
 	

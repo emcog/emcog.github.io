@@ -219,9 +219,6 @@ td.audio-track__length {
 	text-align: right;
 }
 
-.table-row_is-hidden {
-	height: 1px;
-}
 
 #download {
 	margin: 29px auto;
