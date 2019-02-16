@@ -99,6 +99,8 @@ h1 {
 #audio{
 	/*margin: 0 auto;*/
 	background-color: var(--color-primary__tint-x-light);
+	 /*temporary setting*/
+	 padding-top: 20px;
 }
 
 #audio-player {
@@ -281,6 +283,20 @@ td.audio-track__length {
 }
 
 /**/
+
+
+/*H5 temporary*/
+
+audio {
+	width: 100%;
+}
+
+.h5_track-name > td {
+	padding: 18px 0 0 0;
+}
+
+
+
 
 @media screen and (max-width: 1650px) {
 	#audio-tracks {
