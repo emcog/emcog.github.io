@@ -100,7 +100,7 @@ h1 {
 	/*margin: 0 auto;*/
 	background-color: var(--color-primary__tint-x-light);
 	 /*temporary setting*/
-	 padding-top: 20px;
+	 /*padding-top: 20px;*/
 }
 
 #audio-player {
